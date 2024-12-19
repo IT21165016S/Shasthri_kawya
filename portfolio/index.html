@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="https://via.placeholder.com/32" type="image/x-icon">
 </head>
+
 <body>
   <!-- Navigation -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar-bar">
       <h1 class="logo">Shasthri<span> Kawya</span></h1>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -24,6 +26,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
+      <!-- Profile Image -->
+      <img src="assets/profile.jpeg" alt="Shasthri Kawya" class="profile-img">
       <h2>Hello! I'm <span>Shasthri Kawya</span></h2>
       <p>Creative IT graduate and developer, crafting user-friendly experiences.</p>
       <a href="#projects" class="btn">Explore Projects</a>
@@ -71,8 +75,7 @@
         <p>This is a Spring Boot web application developed 
             to create a social media platform tailored for 
             fitness enthusiasts to share their fitness journey,
-             workouts, and healthy lifestyle tips.</p>
-         <p><b>Tools used: Spring Boot, React, OAuth2, Spring Security</b></p>    
+             workouts, and healthy lifestyle tips.</p>   
         <a href="https://github.com/lewandowski96/paf-skeleton.git" target="_blank" class="btn">View Project</a>
       </div>
       <div class="project">
@@ -98,7 +101,7 @@
       <div class="project">
         <h3>Ticket Management System</h3>
         <p>A web-based app built with MERN stack to manage user tickets efficiently.</p>
-        <a href="git@github.com:Shasthri2000/Ticketing-System.git" target="_blank" class="btn">View Project</a>
+        <a href="https://github.com/Shasthri2000/Ticketing-System.git" target="_blank" class="btn">View Project</a>
       </div>
       <div class="project">
         <h3>Student Management(MERN stack)</h3>
@@ -142,6 +145,17 @@
         target.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // Color-Changing Navbar on Scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.background = '#ff577f';
+      } else {
+        navbar.style.background = '#ffadc6';
+      }
+    });
   </script>
 </body>
+
 </html>
